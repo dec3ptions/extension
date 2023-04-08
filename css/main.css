@@ -1,0 +1,27 @@
+
+
+:root {
+  --bg: #19323C;
+  --btn: #F2545B;
+  --btn_alt: #A93F55;
+  --txt: #F3F7F0;
+}
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+	width: 300px;
+	height: 300px;
+
+	background: var(--bg);
+	color: white;
+}

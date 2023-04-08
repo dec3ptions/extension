@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Orbital Daggers</title>
+	<meta charset="utf-8">
+  <meta name="author" content="Seojoon Yeon">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+
+
+
+  
+
+
+
+
+	
+
+
+  
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/ingame.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+
+	
+
+	<link rel="stylesheet" type="text/css" href="css/ads.css">
+    
+</head>
+<body>
+
+  
+  <br>
+
+
+	
+	
+	<div id="menu_btn">
+		<img src="assets/svgs/list.svg" id="menu_btn_img">
+	</div>
+	<div id="fullscreen_btn">
+		<img src="assets/svgs/fullscreen.svg">
+	</div>
+
+	<div class="screen" id="screen_loading">
+		<h1>Loading....</h1>
+	</div>
+
+	<div class="screen" id="screen_main_menu">
+		<div id="news">
+        </div>
+        
+		<!-- <img src="assets/svgs/dagger.svg" class="dagger_svg"> -->
+		<img src="assets/others/topbanner.png" style="width:340px; margin-bottom: -30px;">
+
+
+		<!-- <h2>Orbital Daggers</h2> -->
+		<div id="main_menu_row1">
+			<div class="main_menu_cell">
+				<img src="assets/icons/main_energy.png">
+				<br>
+				<div id="energy">Energy:<br>Loading...</div>
+			</div>
+
+			<div class="button big_btn" id="play_btn">
+				Play
+			</div>
+
+			<div class="main_menu_cell">
+				<img src="assets/icons/main_gift.png" id="daily_gift_img">
+				<br>
+				<div id="daily_gift">Daily Gift:<br>Loading...</div>
+			</div>
+			
+		</div>
+		
+		<div class="main_menu_row">
+			<div class="button main_menu_btn" id="levels_btn">
+				Levels
+			</div>
+			
+		</div>
+		<div class="main_menu_row">
+			<div class="button main_menu_btn" id="dagsel_btn">
+				Daggers
+			</div>
+			<div class="button main_menu_btn" id="upgrades_btn">
+				Upgrades
+			</div>
+		</div>
+		<div class="main_menu_row">
+			<div class="button_light main_menu_btn" id="settings_btn">
+	            Settings
+	        </div>
+
+			<a class="button_light main_menu_btn_wide" target="_blank" href="https://onionfist.com/extensions/#referrer=orbdag">More Games</a>
+			
+			<div class="button_light main_menu_btn" id="credits_btn">
+				Credits
+			</div>
+		</div>
+
+
+		<div>
+			
+		</div>
+		<!-- <img src="assets/characters/player.png" id="player_img"> -->
+		<!-- <div class="button">
+			Settings
+		</div> -->
+
+		<br>
+		<div style="color: #808080; margin: 15px 0px; font-family: Arial; font-size: 14px; width: 300px; display: inline-block;">
+            2021 Onionfist Studio. All Rights Reserved. Contact: flyingdodo9000@gmail.com <br>
+            By using Orbital Daggers, you agree to our <a href="https://onionfist.com/privacy_policy/" target="_blank" style="color: #808080; text-decoration: underline !important; color: #b5b5b5; border: none !important;">Privacy Policy</a> and 
+            <a href="https://onionfist.com/terms_of_service/" target="_blank" style="color: #808080; text-decoration: underline !important; color: #b5b5b5; border: none !important;">Terms of Service</a>
+        </div>
+	</div>
+
+	<div class="screen screen_wide" id="screen_playing">
+		<div id="overlay_msg" class="screen">
+			<span id="overlay_txt"></span>
+		</div>
+		<div id="canvas_container">
+			
+		</div>
+		<img src="assets/others/controls.png" id="controls_overlay">
+	</div>
+
+	<div class="screen screen_wide" id="screen_no_energy">
+		<h1>No energy!</h1>
+		<p>Please wait for your energy to refill. Come back in an hour! This is a friendly reminder to take a break and go for a walk or something! Your eyes need some rest.</p>
+		<img src="assets/icons/energy.png">
+		<br>
+		<div class="button big_btn" id="no_energy_btn">
+			OK
+		</div>
+	</div>
+
+	<div class="screen" id="screen_credits">
+		<h1>Credits</h1>
+		<p>Weapon design Credits: Butta_knife, Jonathan</p>
+		<p>Weapon stats help: ₕ已ᶜᶄ / heck, Jerwo, Da_fat_potato, Rocky707 (Hamster)</p>
+		<p>Leveling idea by Carrots, XDoom</p>
+		<h2>Icons</h2>
+		<p>Icons from thenounproject. No attribution needed because I purchased the icons.</p>
+	</div>
+
+	<div class="screen" id="screen_dagsel">
+		<h1>Equipped Daggers</h1>
+		<div id="dagsel_equipped">
+			
+		</div>
+		<h1>Dagger Collection</h1>
+		<div id="dagsel_unequipped">
+			
+		</div>
+	</div>
+
+	<div class="screen" id="screen_dagsel_closeup">
+		<h1>Dagger</h1>
+		<h2 id="dagsel_closeup_name"></h2>
+		<img id="dagsel_closeup_img" src="">
+		<h2 id="dagsel_closeup_stats"></h2>
+		<h2 id="dagsel_closeup_action_enchant" style="color:#00ffff"></h2>
+
+		<div id="dagsel_closeup_action" class='button'>
+			Loading...
+		</div>
+	</div>
+
+	<div class="screen" id="screen_error">
+		<h1 id="error_h1"></h1>
+		<p id="error_p"></p>
+
+		<div id="error_action" class='button'>
+			OK
+		</div>
+	</div>
+
+
+	<div class="screen" id="screen_daily_gift">
+		<h1>Surprise!</h1>
+		<img src="assets/icons/xp.png">
+		<h2 id="dg_xp_reward"></h2>
+		<img src="" id="dg_dagsel_reward_img">
+		<h2 id="dg_dagsel_reward"></h2>
+
+
+		<div class='button' id="dg_claim_btn">
+			Claim Daily Reward
+		</div>
+	</div>
+
+
+
+
+	<div class="screen" id="screen_upgrades">
+		<h1>Upgrades</h1>
+		<h1 id="upgrades_xp">
+			0XP
+		</h1>
+		<div id="upgrades">
+			
+		</div>
+	</div>
+
+	<div class="screen" id="screen_settings">
+        <h1>Settings</h1>
+        <div id="settings">
+            
+        </div>
+        <h1 id="dangerous_text">Dangerous:</h1>
+        <div class="button" id="erase_data_btn">
+        	Erase player data
+        </div>
+    </div>
+
+	
+
+
+	<div class="screen" id="screen_levels">
+		<h1>Levels</h1>
+		<div id="levels">
+			
+		</div>
+	</div>
+
+
+	<div class="screen" id="screen_story">
+		<h1>Orbital Daggers</h1>
+		<!-- <img id="story_img"> -->
+		<div id="story_cont">
+			<h1 id="story_txt"></h1>
+		</div>
+		
+		<div class="button big_btn" id="story_next_btn">
+			Continue
+		</div>
+	</div>
+
+	<div class="screen" id="screen_death">
+		<h1>You died!</h1>
+		<div class="button" id="death_respawn_btn">
+			Re-spawn
+		</div>
+		<div class="button" id="death_quit_btn">
+			Quit to menu
+		</div>
+	</div>
+
+	<div class="screen" id="screen_data_erase_ask">
+		<h1>Erase data?</h1>
+		<p>Do you want to permanently erase your game data, such as levels completed, items unlocked, and more? This process is irreversable and you can not get your data back.</p>
+		<div class="button" id="erase_yes">
+			Erase data
+		</div>
+		<div class="button" id="erase_no">
+			Cancel
+		</div>
+	</div>
+
+	<div class="screen" id="screen_data_erase_confirm">
+		<h1>Data erased!</h1>
+		<div class="button" id="erase_done">
+			OK
+		</div>
+	</div>
+
+	<div class="screen" id="screen_victory">
+		<h1>Level Complete!</h1>
+		<img src="assets/icons/xp.png">
+		<h2 id="xp_reward"></h2>
+		<img src="" id="dagsel_reward_img">
+		<h2 id="dagsel_reward"></h2>
+		<div class="button" id="victory_next_btn">
+			Next Level
+		</div>
+		<div class="button" id="victory_quit_btn">
+			Quit to menu
+		</div>
+	</div>
+
+
+
+
+	<div class="screen" id="screen_afk">
+		<h1>Are you still here?</h1>
+		<div class="button big_btn" id="afk_button">
+			Yes, I'm here!
+		</div>
+	</div>
+	
+
+	<script type="text/javascript" src="libs/jquery.js"></script>
+	<script type="text/javascript" src="libs/pixi.js"></script>
+	<script type="text/javascript" src="libs/pixi-unsafe-eval.js"></script>
+	<script type="text/javascript" src="libs/pizzicato.js"></script>
+	<script type="text/javascript" src="libs/SAT.js"></script>
+
+	
+	
+	<script type="text/javascript" src="main_43a8b769_444a_40b2_aea8_5d109ea60310.js"></script>
+
+	
+</body>
+</html>
