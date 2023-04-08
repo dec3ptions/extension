@@ -340,7 +340,7 @@ class Blade {
 
 
 
-var testing = true;
+var testing = false;
 
 $( document ).ready( async function() {
   await state.init();
